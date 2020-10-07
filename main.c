@@ -6,6 +6,8 @@ int main(){
     
    printf("Hello World\n");
    printf("%d\n",j);
+   char *names[] = {"Sam","Sarah"};
+   printf("%s\n",*names);
 
    for (int i=0;i<10;i++){
        printf("%d\n",i);
