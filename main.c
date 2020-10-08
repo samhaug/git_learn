@@ -14,7 +14,7 @@ int main(int argc, char **argv){
    printf("void 1: %p\n",(double*)v1);
    printf("void 2: %p\n",(double*)v2);
    printf("a: %d\n",a);
-   printf("size of void: %p\n",b);
+   printf("size of void: %d\n",b);
    i = malloc(40*sizeof(int));
    printf("%x\n",i);
    printf("%o\n",i);
