@@ -4,16 +4,24 @@
 
 int main(int argc, char **argv){
 
-   char *titles[] = {"A tale of two cities", "Moby Dick"};
-   printf("%s\n",*titles);
-   printf("%s\n",*(titles+1));
-
-   int vector[] = {234, 543, 32, 54};
-   int *p = vector;
-
-   for (int i=0;i<4;i++){
-      printf("vec: %x %d\n",p,*p);
-      p++;
+   int a[1000];
+   FILE *ifl;
+   if (argc != 2){
+      printf("Need a file name\n");
+      exit(0);
    }
+
+   ifl = fopen(*(argv+1),"r");
+
+   int i=0;
+   while(!feof(ifl)){
+      fscanf(ifl,"%d",a+i);
+      i++;
+   }
+
+   for (int j=0;j<i;j++){
+       printf("%d\n",a[j]);
+   }
+
 }
 
